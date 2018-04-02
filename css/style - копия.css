@@ -1,0 +1,435 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #014F5C;
+	padding-top: 65px;
+	padding-bottom: 200px;
+	position: relative;
+	
+	overflow: hidden;
+	/*height: 3000px;*/
+}
+
+header:after, .cases:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: rgba(255,255,255,.05);
+	left: 25%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: skew(-45deg);
+	    -ms-transform: skew(-45deg);
+	        transform: skew(-45deg);
+	-webkit-transform-origin: left bottom;
+	    -ms-transform-origin: left bottom;
+	        transform-origin: left bottom;
+	padding-right: 100%;
+}
+
+.cases:after {
+	z-index: -1;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+header nav {
+	margin-bottom: 50px;
+}
+
+header nav a {
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	padding-left: 5px;
+	position: relative;
+	z-index: 2;
+}
+
+header nav a:before {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 30px;
+	width: 277px;
+	left: 0;
+	top: 20px;
+	background-color: #CC3366;
+	z-index: -1;
+	
+
+	-webkit-animation: typea 2s ease-out;
+	
+
+	        animation: typea 2s ease-out;
+	
+	
+}
+
+header nav a span {
+	font-family: 'AmaticSC', sans-serif;
+	font-size: 72px;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 58px;
+	width: 182px;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: type 1s steps(20, end);
+	-webkit-animation: type 1s steps(20, end);
+	display: inline-block;
+}
+
+@-webkit-keyframes type{
+	from {width: 0;}
+}
+
+@keyframes type{
+	from {width: 0;}
+}
+
+@-webkit-keyframes typea{
+	0%, 50% {width: 0;}
+	50%, 100% {-webkit-animation-delay: 1s;animation-delay: 1s; }
+}
+
+@keyframes typea{
+	0%, 50% {width: 0;}
+	50%, 100% {-webkit-animation-delay: 1s;animation-delay: 1s; }
+}
+
+header nav a address {
+	font-family: 'MontserratAlternates', sans-serif;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 300;
+	font-style: normal;
+	width: 18em;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: type 2s steps(50, end);
+	-webkit-animation: type 2s steps(50, end);
+}
+
+.mainMessage {
+	margin: 0 auto;
+	text-align: center;
+}
+
+header h1 {
+	font-family: 'MontserratAlternates', sans-serif;
+	font-size: 120px;
+	color: transparent;
+	background-image: url(../img/mainMessage.jpg);
+	background-size: cover;
+	background-position: center;
+	background-clip: text; 
+	-webkit-background-clip: text; 
+	font-weight: 900;
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: -10px;
+	line-height: 86px;
+	display: inline-block;
+	text-align: left;
+	padding-right: 10px;
+	opacity: 1;
+	animation: fadeIn 2s ease-out;
+	-moz-animation: fadeIn 2s ease-out;
+	animation-fill-mode: both;
+}
+
+@keyframes fadeIn{
+	0% {transform: translate(-30px);}
+	100% {transform: translate(10px);}
+}
+
+@-moz-keyframes fadeIn{
+	0% {opacity: 0.1;}
+	100% {opacity: 1;}
+}
+
+.portfolioCases {
+	background-color: #F2F2F2;
+	position: relative;
+}
+
+.portfolioCases .cases {
+	width: 360px;
+	height: 275px;
+	border-radius: 5px;
+	background-color: #147B91;
+	-webkit-box-shadow: 2px 2px 5px 0 rgba(0,0,0,.5);
+	        box-shadow: 2px 2px 5px 0 rgba(0,0,0,.5);
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 100px;
+	margin-top: -50px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	animation: fadeInTop 1s ease both;
+	transition: top .5s;
+	top: 0;
+}
+
+.portfolioCases .cases:hover {
+	top: -20px;
+}
+
+.portfolioCases .cases:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.portfolioCases .cases:nth-child(2) {
+	animation-delay: 0.5s;
+}
+
+.portfolioCases .cases:nth-child(3) {
+	animation-delay: 1s;
+}
+
+.portfolioCases .cases:nth-child(4) {
+	animation-delay: 1.5s;
+}
+
+.portfolioCases .cases:nth-child(5) {
+	animation-delay: 2s;
+}
+
+.portfolioCases .cases:nth-child(6) {
+	animation-delay: 2.5s;
+}
+
+@keyframes fadeInTop {
+	0% {opacity: 0;transform: translate(0, 100px);}
+	100% {opacity: 1;transform: translate(0, 0px);}
+}
+
+.portfolioCases .cases .portfolioCaseWork {
+	display: block;
+	width: 300px;
+	height: 170px;
+	z-index: 5;
+	background-repeat: no-repeat;
+	background-position: center 0;
+	background-size: 100%;
+	margin: 34px 0 0 30px;
+}
+
+.portfolioCases .cases:nth-child(1) .portfolioCaseWork {
+	background-image: url(../img/portfolioCase1.png);
+}
+
+.portfolioCases .cases:nth-child(2) .portfolioCaseWork {
+	background-image: url(../img/portfolioCase2.png);
+	background-position: center -257px;
+}
+
+.portfolioCases .cases:nth-child(3) .portfolioCaseWork {
+	background-image: url(../img/portfolioCase3.png);
+	background-position: center -100px;
+}
+
+.portfolioCases .cases:nth-child(4) .portfolioCaseWork {
+	background-image: url(../img/portfolioCase4.png);
+}
+
+.portfolioCases .cases:nth-child(5) .portfolioCaseWork {
+	background-image: url(../img/portfolioCase5.png);
+}
+
+.portfolioCases .cases:nth-child(6) .portfolioCaseWork {
+	background-image: url(../img/portfolioCase6.png);
+}
+
+.portfolioCases .cases .portfolioCaseWork:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url(../img/iMac.png);
+	background-size: 326px;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	z-index: 10;
+}
+
+.portfolioCases .cases .portfolioCaseWork:before {
+	content: '';
+	text-align: center;
+	line-height: 170px;
+	color: #fff;
+	display: block;
+	position: absolute;
+	width: 300px;
+	height: 170px;
+	top: 33px;
+	left: 29px;
+	transform: scale(0);
+	transition: .2s ease-out;
+	border-radius: 5px;
+	background-image: url(../img/eye.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: 30px;
+	background-size: 30px;
+
+}
+
+.portfolioCases .cases:hover .portfolioCaseWork:before {
+	background-color: rgba(0,0,0,.8);
+	transform: scale(1);
+}
+
+.portfolioCases:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*---------------------------------------------------*/
+
+.aboutMe {
+	padding-top: 50px;
+	background-color: #F2F2F2;
+	padding-bottom: 150px;
+
+	color: #000;
+	font-size: 18px;
+	font-family: 'MontserratAlternates', sans-serif;
+	font-weight: normal;
+}
+
+.aboutMe .description p:first-letter {
+	color: #cc3366;
+}
+.aboutMe .description p:first-child {
+	margin-bottom: 50px;
+}
+
+.aboutMe .container {
+	text-align: center;
+}
+
+.aboutMe .description, .aboutMe .myContacts {
+	/*float: left;*/
+	display: inline-block;
+	text-align: left;
+}
+
+.aboutMe .description {
+	max-width: 455px;
+	margin-right: 130px;
+}
+
+.aboutMe .myContacts {
+	vertical-align: top;
+	font-style: normal;
+}
+
+.aboutMe .myContacts span {
+	letter-spacing: 3px;
+	display: inline-block;
+	width: 150px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+
+	background-position: right center;
+	background-size: 18px;
+	background-repeat: no-repeat;
+}
+
+.aboutMe .myContacts span:nth-child(1) {
+		background-image: url(../img/man.png);
+}
+
+.aboutMe .myContacts span:nth-child(3) {
+		background-image: url(../img/post.png);
+}
+
+/*---------------------------*/
+
+.cooperation {
+	background-color: #F2F2F2;
+}
+
+.cooperation h2 {
+	color: #000;
+	font-size: 48px;
+	text-align: center;
+	font-family: 'MontserratAlternates', sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-bottom: 90px;
+}
+
+.icon-container {
+		margin-top: 25px;
+		height: 265px;
+		width: 265px;
+		background-color: #eaeaea;
+		box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,.25);
+		border-radius: 5px;
+		position: relative;
+	}
+
+	.icon-container:before {
+		content: '';
+		height: 35px;
+		width: 5px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		background-color: #004a66;
+		position: absolute;
+		left: -5px;
+		top: 115px;
+	}
+
+	.icon-container:after {
+		content: '';
+		height: 35px;
+		width: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		background-color: #004a66;
+		position: absolute;
+		right: -5px;
+		top: 115px;
+	}
+
+	.image-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 200px;
+		transition: transform .2s ease-out;
+	}
+
+	.image-container.first {
+		background-image: url(../img/startFirst.png);
+	}
+
+	.image-container.second {
+		background-image: url(../img/startSecond.png);
+	}
+
+	.image-container.third {
+		background-image: url(../img/startThird.png);
+	}
